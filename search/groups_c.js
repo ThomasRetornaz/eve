@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['reductions_0',['Reductions',['../group__core__reduction.html',1,'']]]
+  ['polynomial_20functions_0',['Polynomial functions',['../group__polynomial.html',1,'']]],
+  ['predicates_1',['Predicates',['../group__core__predicates.html',1,'']]]
 ];

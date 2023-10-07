@@ -148,6 +148,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeve_1_1as.html">as</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lightweight type-wrapper.  <a href="structeve_1_1as.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeve_1_1as__element.html">as_element</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lightweight type-wrapper over element type.  <a href="structeve_1_1as__element.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeve_1_1as__pattern.html">as_pattern</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formula-based pattern holder.  <a href="structeve_1_1as__pattern.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,6 +225,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeve_1_1platform.html">platform</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Platform specific constexpr information.  <a href="structeve_1_1platform.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeve_1_1quaternion.html">quaternion</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SIMD-compatible representation of quaternion numbers.  <a href="structeve_1_1quaternion.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeve_1_1reduction.html">reduction</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag type for reduction <a href="https://en.cppreference.com/w/cpp/named_req/Callable">Callable Object</a> properties.  <a href="structeve_1_1reduction.html#details">More...</a><br /></td></tr>
@@ -341,6 +347,9 @@ Concepts</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concepteve_1_1has__store__equivalent.html">has_store_equivalent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">a concept, tests <code>store_equivalent</code> has a non-default definition for a value and a pointer. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concepteve_1_1pattern__formula.html">pattern_formula</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">what callable can be a pattern formula <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concepteve_1_1callable.html">callable</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>EVE</b> callable <br /></td></tr>
@@ -468,11 +477,6 @@ template&lt;typename Type &gt; </td></tr>
 <tr class="memitem:gae07cec0ceff676cedb02884af507fd2c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__logical_gae07cec0ceff676cedb02884af507fd2c.html#gae07cec0ceff676cedb02884af507fd2c">swap_if</a> (Mask const &amp;mask, Value &amp;lhs, Value &amp;rhs) noexcept</td></tr>
 <tr class="memdesc:gae07cec0ceff676cedb02884af507fd2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conditional swap.  <br /></td></tr>
 <tr class="separator:gae07cec0ceff676cedb02884af507fd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadb02ff3b1a1d82d65c762261480c7143"><td class="memTemplParams" colspan="2">
-template&lt;rbr::concepts::option ... Options&gt; </td></tr>
-<tr class="memitem:gadb02ff3b1a1d82d65c762261480c7143"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>decorators</b> (Options &amp;&amp;... options) -&gt; <a class="el" href="structeve_1_1decorators.html">decorators</a>&lt; decltype(rbr::settings(static_cast&lt; decltype(options) &amp;&amp; &gt;(options) ...))&gt;</td></tr>
-<tr class="memdesc:gadb02ff3b1a1d82d65c762261480c7143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for <a class="el" href="structeve_1_1decorators.html" title="Overloading error reporting helper.">eve::decorators</a>. <br /></td></tr>
-<tr class="separator:gadb02ff3b1a1d82d65c762261480c7143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -613,6 +617,15 @@ constexpr <a class="el" href="structeve_1_1ignore__none__.html">ignore_none_</a>
 <tr class="memitem:ga59c3b80b72894e8fe0487d8fc2bf216e"><td class="memItemLeft" align="right" valign="top">constexpr callable_real_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__complex_ga59c3b80b72894e8fe0487d8fc2bf216e.html#ga59c3b80b72894e8fe0487d8fc2bf216e">real</a> = {}</td></tr>
 <tr class="memdesc:ga59c3b80b72894e8fe0487d8fc2bf216e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing real part of values.  <br /></td></tr>
 <tr class="separator:ga59c3b80b72894e8fe0487d8fc2bf216e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga653bcb136e1f2983814787c42567f541"><td class="memItemLeft" align="right" valign="top">constexpr callable_compress_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__compress_ga653bcb136e1f2983814787c42567f541.html#ga653bcb136e1f2983814787c42567f541">compress</a> = {}</td></tr>
+<tr class="memdesc:ga653bcb136e1f2983814787c42567f541"><td class="mdescLeft">&#160;</td><td class="mdescRight">A low level function to compress one simd value based on a mask.  <br /></td></tr>
+<tr class="separator:ga653bcb136e1f2983814787c42567f541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae391a1ac55150bb87da1f9fd0740b53e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__compress_gae391a1ac55150bb87da1f9fd0740b53e.html#gae391a1ac55150bb87da1f9fd0740b53e">compress_copy</a> = detail::compress_callable&lt;compress_copy_core&gt; {}</td></tr>
+<tr class="memdesc:gae391a1ac55150bb87da1f9fd0740b53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function that copies selected elements from source to destination, while compressing them to the left.  <br /></td></tr>
+<tr class="separator:gae391a1ac55150bb87da1f9fd0740b53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa538588c547767772b1b1fe4b61f357e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__compress_gaa538588c547767772b1b1fe4b61f357e.html#gaa538588c547767772b1b1fe4b61f357e">compress_store</a> = detail::compress_callable_no_density&lt;compress_store_core&gt; {}</td></tr>
+<tr class="memdesc:gaa538588c547767772b1b1fe4b61f357e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function that stores selected elements from an <a class="el" href="concepteve_1_1simd__value.html" title="Specifies that a type a SIMD type.">eve::simd_value</a> to an eve::simd_compatible_ptr, while compressing them to the beginning.  <br /></td></tr>
+<tr class="separator:gaa538588c547767772b1b1fe4b61f357e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga55b591d755a02c9219c36c5603de6dc2"><td class="memItemLeft" align="right" valign="top">constexpr callable_allbits_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__constants_ga55b591d755a02c9219c36c5603de6dc2.html#ga55b591d755a02c9219c36c5603de6dc2">allbits</a> = {}</td></tr>
 <tr class="memdesc:ga55b591d755a02c9219c36c5603de6dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the constant with all bits set.  <br /></td></tr>
 <tr class="separator:ga55b591d755a02c9219c36c5603de6dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -778,6 +791,18 @@ constexpr <a class="el" href="structeve_1_1ignore__none__.html">ignore_none_</a>
 <tr class="memitem:ga4eb5977c62725094fe76ad7d62387dd0"><td class="memItemLeft" align="right" valign="top">constexpr successor_type const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__decorators_ga4eb5977c62725094fe76ad7d62387dd0.html#ga4eb5977c62725094fe76ad7d62387dd0">successor</a> = {}</td></tr>
 <tr class="memdesc:ga4eb5977c62725094fe76ad7d62387dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Higher-order <a href="https://en.cppreference.com/w/cpp/named_req/Callable">Callable Object</a> imbuing incrementation behaviour onto other <a href="https://en.cppreference.com/w/cpp/named_req/Callable">Callable Objects</a>.  <br /></td></tr>
 <tr class="separator:ga4eb5977c62725094fe76ad7d62387dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae93d09601f86249bbd239747c107cb69"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__named__shuffles_gae93d09601f86249bbd239747c107cb69.html#gae93d09601f86249bbd239747c107cb69">blend</a> = detail::named_shuffle_2&lt;blend_t&gt; {}</td></tr>
+<tr class="memdesc:gae93d09601f86249bbd239747c107cb69"><td class="mdescLeft">&#160;</td><td class="mdescRight">a named shuffle for mixing 2 registers together, without changing positions.  <br /></td></tr>
+<tr class="separator:gae93d09601f86249bbd239747c107cb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga268e38294132060fb0908cfe9e794ee5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__named__shuffles_ga268e38294132060fb0908cfe9e794ee5.html#ga268e38294132060fb0908cfe9e794ee5">reverse</a> = detail::named_shuffle_1&lt;reverse_t&gt; {}</td></tr>
+<tr class="memdesc:ga268e38294132060fb0908cfe9e794ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">a named shuffle for reversing a register.  <br /></td></tr>
+<tr class="separator:ga268e38294132060fb0908cfe9e794ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c7c0e57424cd75ff59fba019dc41f3c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__named__shuffles_ga5c7c0e57424cd75ff59fba019dc41f3c.html#ga5c7c0e57424cd75ff59fba019dc41f3c">reverse_in_subgroups</a> = detail::named_shuffle_1&lt;reverse_in_subgroups_t&gt; {}</td></tr>
+<tr class="memdesc:ga5c7c0e57424cd75ff59fba019dc41f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">a named shuffle for reversing all subgroups in a register  <br /></td></tr>
+<tr class="separator:ga5c7c0e57424cd75ff59fba019dc41f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa73e3ec48a859648ac298f5a73b5c6a5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__named__shuffles_gaa73e3ec48a859648ac298f5a73b5c6a5.html#gaa73e3ec48a859648ac298f5a73b5c6a5">swap_adjacent</a> = detail::named_shuffle_1&lt;swap_adjacent_t&gt; {}</td></tr>
+<tr class="memdesc:gaa73e3ec48a859648ac298f5a73b5c6a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">a named shuffle that goes all pairs of elements and swaps them: [0, 1, 2, 3] =&gt; [1, 0, 3, 2]  <br /></td></tr>
+<tr class="separator:gaa73e3ec48a859648ac298f5a73b5c6a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf9bc648f57be07a02903259faabd2df1"><td class="memItemLeft" align="right" valign="top">constexpr callable_abs_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__arithmetic_gaf9bc648f57be07a02903259faabd2df1.html#gaf9bc648f57be07a02903259faabd2df1">abs</a> = {}</td></tr>
 <tr class="memdesc:gaf9bc648f57be07a02903259faabd2df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the absolute value of the parameter.  <br /></td></tr>
 <tr class="separator:gaf9bc648f57be07a02903259faabd2df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -898,9 +923,6 @@ constexpr <a class="el" href="structeve_1_1ignore__none__.html">ignore_none_</a>
 <tr class="memitem:ga6b5426b411f619a1b836eeda12cdc9c0"><td class="memItemLeft" align="right" valign="top">constexpr callable_combine_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__simd_ga6b5426b411f619a1b836eeda12cdc9c0.html#ga6b5426b411f619a1b836eeda12cdc9c0">combine</a> = {}</td></tr>
 <tr class="memdesc:ga6b5426b411f619a1b836eeda12cdc9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the TODO.  <br /></td></tr>
 <tr class="separator:ga6b5426b411f619a1b836eeda12cdc9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa538588c547767772b1b1fe4b61f357e"><td class="memItemLeft" align="right" valign="top">constexpr callable_compress_store_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__simd_gaa538588c547767772b1b1fe4b61f357e.html#gaa538588c547767772b1b1fe4b61f357e">compress_store</a> = {}</td></tr>
-<tr class="memdesc:gaa538588c547767772b1b1fe4b61f357e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the TODO.  <br /></td></tr>
-<tr class="separator:gaa538588c547767772b1b1fe4b61f357e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3da1ad6fd04f08ac14cbe0ff478b6951"><td class="memItemLeft" align="right" valign="top">constexpr callable_conj_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__arithmetic_ga3da1ad6fd04f08ac14cbe0ff478b6951.html#ga3da1ad6fd04f08ac14cbe0ff478b6951">conj</a> = {}</td></tr>
 <tr class="memdesc:ga3da1ad6fd04f08ac14cbe0ff478b6951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the the conjugate value.  <br /></td></tr>
 <tr class="separator:ga3da1ad6fd04f08ac14cbe0ff478b6951"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -985,6 +1007,9 @@ constexpr <a class="el" href="structeve_1_1ignore__none__.html">ignore_none_</a>
 <tr class="memitem:gae0ef9200ab790a71835ff39ff61061a5"><td class="memItemLeft" align="right" valign="top">constexpr callable_div_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__arithmetic_gae0ef9200ab790a71835ff39ff61061a5.html#gae0ef9200ab790a71835ff39ff61061a5">div</a> = {}</td></tr>
 <tr class="memdesc:gae0ef9200ab790a71835ff39ff61061a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the division of multiple values.  <br /></td></tr>
 <tr class="separator:gae0ef9200ab790a71835ff39ff61061a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga747bad78fe38220bf5fd9ca81edaf80c"><td class="memItemLeft" align="right" valign="top">constexpr callable_dot_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__arithmetic_ga747bad78fe38220bf5fd9ca81edaf80c.html#ga747bad78fe38220bf5fd9ca81edaf80c">dot</a> = {}</td></tr>
+<tr class="memdesc:ga747bad78fe38220bf5fd9ca81edaf80c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes elementwise the dot product of the two parameters.  <br /></td></tr>
+<tr class="separator:ga747bad78fe38220bf5fd9ca81edaf80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga720ef267847ac42c18eb45878ccf32b5"><td class="memItemLeft" align="right" valign="top">constexpr callable_exponent_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__internal_ga720ef267847ac42c18eb45878ccf32b5.html#ga720ef267847ac42c18eb45878ccf32b5">exponent</a> = {}</td></tr>
 <tr class="memdesc:ga720ef267847ac42c18eb45878ccf32b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the IEEE exponent of the floating value.  <br /></td></tr>
 <tr class="separator:ga720ef267847ac42c18eb45878ccf32b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -997,6 +1022,9 @@ constexpr <a class="el" href="structeve_1_1ignore__none__.html">ignore_none_</a>
 <tr class="memitem:gae321c7322c1e89bb6e54b882569caf43"><td class="memItemLeft" align="right" valign="top">constexpr callable_fdim_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__arithmetic_gae321c7322c1e89bb6e54b882569caf43.html#gae321c7322c1e89bb6e54b882569caf43">fdim</a> = {}</td></tr>
 <tr class="memdesc:gae321c7322c1e89bb6e54b882569caf43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the positive difference between the two parameters.  <br /></td></tr>
 <tr class="separator:gae321c7322c1e89bb6e54b882569caf43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe526beb78cfe17529587bbfff4bb597"><td class="memItemLeft" align="right" valign="top">constexpr callable_first_true_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__reduction_gafe526beb78cfe17529587bbfff4bb597.html#gafe526beb78cfe17529587bbfff4bb597">first_true</a> = {}</td></tr>
+<tr class="memdesc:gafe526beb78cfe17529587bbfff4bb597"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to find a first true value, if there is one.  <br /></td></tr>
+<tr class="separator:gafe526beb78cfe17529587bbfff4bb597"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad440bea367cdc362a6e90919cc601e35"><td class="memItemLeft" align="right" valign="top">constexpr callable_firstbitset_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__bitops_gad440bea367cdc362a6e90919cc601e35.html#gad440bea367cdc362a6e90919cc601e35">firstbitset</a> = {}</td></tr>
 <tr class="memdesc:gad440bea367cdc362a6e90919cc601e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes <a class="el" href="glossary_semantic.html#glossary_elementwise">elementwise</a> the bit pattern in which the only bit set (if it exists) is the first bit set in the input.  <br /></td></tr>
 <tr class="separator:gad440bea367cdc362a6e90919cc601e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1040,6 +1068,9 @@ constexpr callable_fmod_&#160;</td><td class="memItemRight" valign="bottom"><b>f
 <tr class="memitem:ga1104bd95e3b6b1a682c2fd9c290034d0"><td class="memItemLeft" align="right" valign="top">constexpr callable_gather_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__simd_ga1104bd95e3b6b1a682c2fd9c290034d0.html#ga1104bd95e3b6b1a682c2fd9c290034d0">gather</a> = {}</td></tr>
 <tr class="memdesc:ga1104bd95e3b6b1a682c2fd9c290034d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the TODO.  <br /></td></tr>
 <tr class="separator:ga1104bd95e3b6b1a682c2fd9c290034d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64cba22849ce7362968aa0c2661a5ab0"><td class="memItemLeft" align="right" valign="top">constexpr callable_has_equal_in_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__simd_ga64cba22849ce7362968aa0c2661a5ab0.html#ga64cba22849ce7362968aa0c2661a5ab0">has_equal_in</a> = {}</td></tr>
+<tr class="memdesc:ga64cba22849ce7362968aa0c2661a5ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given two simd_values: <code>x</code>, <code>match_against</code> returns a logical mask. The res[i] == <a class="el" href="group__core__reduction_ga66505398697cefc9ea7b11b0ee2c7def.html#ga66505398697cefc9ea7b11b0ee2c7def" title="Computes a bool value which is true if and only if any elements of x is not zero.">eve::any</a>(x[i] == match_against);.  <br /></td></tr>
+<tr class="separator:ga64cba22849ce7362968aa0c2661a5ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga46f5764b631e4afe92f87ff3ea1e8524"><td class="memItemLeft" align="right" valign="top">constexpr callable_hi_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__bitops_ga46f5764b631e4afe92f87ff3ea1e8524.html#ga46f5764b631e4afe92f87ff3ea1e8524">hi</a> = {}</td></tr>
 <tr class="memdesc:ga46f5764b631e4afe92f87ff3ea1e8524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the most significant half of each lane.  <br /></td></tr>
 <tr class="separator:ga46f5764b631e4afe92f87ff3ea1e8524"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1178,6 +1209,9 @@ constexpr callable_fmod_&#160;</td><td class="memItemRight" valign="bottom"><b>f
 <tr class="memitem:ga38314db2a1da99c8bdec146b4ed56c9b"><td class="memItemLeft" align="right" valign="top">constexpr callable_is_real_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__predicates_ga38314db2a1da99c8bdec146b4ed56c9b.html#ga38314db2a1da99c8bdec146b4ed56c9b">is_real</a> = {}</td></tr>
 <tr class="memdesc:ga38314db2a1da99c8bdec146b4ed56c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a logical true if and only if the element value is real.  <br /></td></tr>
 <tr class="separator:ga38314db2a1da99c8bdec146b4ed56c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9c0d896a6b4e77fa5e4e3d5b54503d0"><td class="memItemLeft" align="right" valign="top">constexpr callable_is_unit_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__predicates_gaa9c0d896a6b4e77fa5e4e3d5b54503d0.html#gaa9c0d896a6b4e77fa5e4e3d5b54503d0">is_unit</a> = {}</td></tr>
+<tr class="memdesc:gaa9c0d896a6b4e77fa5e4e3d5b54503d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a logical true if and only if the element value is zero.  <br /></td></tr>
+<tr class="separator:gaa9c0d896a6b4e77fa5e4e3d5b54503d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2225cc46f46e4f1d12681e8c949e1413"><td class="memItemLeft" align="right" valign="top">constexpr callable_is_unordered_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__predicates_ga2225cc46f46e4f1d12681e8c949e1413.html#ga2225cc46f46e4f1d12681e8c949e1413">is_unordered</a> = {}</td></tr>
 <tr class="memdesc:ga2225cc46f46e4f1d12681e8c949e1413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a logical true if and only if at least one of the parameters is NaN.  <br /></td></tr>
 <tr class="separator:ga2225cc46f46e4f1d12681e8c949e1413"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1316,15 +1350,18 @@ constexpr callable_fmod_&#160;</td><td class="memItemRight" valign="bottom"><b>f
 <tr class="memitem:ga9e1abef2b02773654dd566b466e9586a"><td class="memItemLeft" align="right" valign="top">constexpr callable_rec_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__arithmetic_ga9e1abef2b02773654dd566b466e9586a.html#ga9e1abef2b02773654dd566b466e9586a">rec</a> = {}</td></tr>
 <tr class="memdesc:ga9e1abef2b02773654dd566b466e9586a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the inverse of the parameter.  <br /></td></tr>
 <tr class="separator:ga9e1abef2b02773654dd566b466e9586a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga137e79b9fcabc8ebe46e75b300beaf03"><td class="memItemLeft" align="right" valign="top">constexpr callable_reduce_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__simd_ga137e79b9fcabc8ebe46e75b300beaf03.html#ga137e79b9fcabc8ebe46e75b300beaf03">reduce</a> = {}</td></tr>
+<tr class="memitem:ga137e79b9fcabc8ebe46e75b300beaf03"><td class="memItemLeft" align="right" valign="top">constexpr callable_reduce_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__reduction_ga137e79b9fcabc8ebe46e75b300beaf03.html#ga137e79b9fcabc8ebe46e75b300beaf03">reduce</a> = {}</td></tr>
 <tr class="memdesc:ga137e79b9fcabc8ebe46e75b300beaf03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the TODO.  <br /></td></tr>
 <tr class="separator:ga137e79b9fcabc8ebe46e75b300beaf03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c45daa0bbee61dee718a0de1e815d65"><td class="memItemLeft" align="right" valign="top">constexpr callable_reldist_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__arithmetic_ga1c45daa0bbee61dee718a0de1e815d65.html#ga1c45daa0bbee61dee718a0de1e815d65">reldist</a> = {}</td></tr>
+<tr class="memdesc:ga1c45daa0bbee61dee718a0de1e815d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the relative distance of its arguments.  <br /></td></tr>
+<tr class="separator:ga1c45daa0bbee61dee718a0de1e815d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae32a7f0a9465fe52d38216d9f5bb6657"><td class="memItemLeft" align="right" valign="top">constexpr callable_rem_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__arithmetic_gae32a7f0a9465fe52d38216d9f5bb6657.html#gae32a7f0a9465fe52d38216d9f5bb6657">rem</a> = {}</td></tr>
 <tr class="memdesc:gae32a7f0a9465fe52d38216d9f5bb6657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the remainder after division.  <br /></td></tr>
 <tr class="separator:gae32a7f0a9465fe52d38216d9f5bb6657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga268e38294132060fb0908cfe9e794ee5"><td class="memItemLeft" align="right" valign="top">constexpr callable_reverse_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__bitops_ga268e38294132060fb0908cfe9e794ee5.html#ga268e38294132060fb0908cfe9e794ee5">reverse</a> = {}</td></tr>
-<tr class="memdesc:ga268e38294132060fb0908cfe9e794ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">elementwise reverses the elements order.  <br /></td></tr>
-<tr class="separator:ga268e38294132060fb0908cfe9e794ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafaa07222ff0f44384515607d9f7d43a7"><td class="memItemLeft" align="right" valign="top">constexpr callable_replace_ignored_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__logical_gafaa07222ff0f44384515607d9f7d43a7.html#gafaa07222ff0f44384515607d9f7d43a7">replace_ignored</a> = {}</td></tr>
+<tr class="memdesc:gafaa07222ff0f44384515607d9f7d43a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A small helper tto replace ignored values.  <br /></td></tr>
+<tr class="separator:gafaa07222ff0f44384515607d9f7d43a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga073de555026307d7265ba21c49940a7f"><td class="memItemLeft" align="right" valign="top">constexpr callable_rotate_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core_ga073de555026307d7265ba21c49940a7f.html#ga073de555026307d7265ba21c49940a7f">rotate</a> = {}</td></tr>
 <tr class="memdesc:ga073de555026307d7265ba21c49940a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotates two halves of the register by a chosen number of elements.  <br /></td></tr>
 <tr class="separator:ga073de555026307d7265ba21c49940a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1364,6 +1401,9 @@ constexpr callable_fmod_&#160;</td><td class="memItemRight" valign="bottom"><b>f
 <tr class="memitem:gaaf372d425d7522a4a661bf070ef442a4"><td class="memItemLeft" align="right" valign="top">constexpr callable_signnz_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__arithmetic_gaaf372d425d7522a4a661bf070ef442a4.html#gaaf372d425d7522a4a661bf070ef442a4">signnz</a> = {}</td></tr>
 <tr class="memdesc:gaaf372d425d7522a4a661bf070ef442a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the never zero sign of the parameter.  <br /></td></tr>
 <tr class="separator:gaaf372d425d7522a4a661bf070ef442a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7b27b48927ea3e9aad82f702a388b28"><td class="memItemLeft" align="right" valign="top">constexpr callable_sort_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__simd_gae7b27b48927ea3e9aad82f702a388b28.html#gae7b27b48927ea3e9aad82f702a388b28">sort</a> = {}</td></tr>
+<tr class="memdesc:gae7b27b48927ea3e9aad82f702a388b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">sorts a register in a accedning order accroding to a comparator.  <br /></td></tr>
+<tr class="separator:gae7b27b48927ea3e9aad82f702a388b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab3e62d0320771141e199eeb36af09ed8"><td class="memItemLeft" align="right" valign="top">constexpr splat_type const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__simd_gab3e62d0320771141e199eeb36af09ed8.html#gab3e62d0320771141e199eeb36af09ed8">splat</a> = {}</td></tr>
 <tr class="memdesc:gab3e62d0320771141e199eeb36af09ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the TODO.  <br /></td></tr>
 <tr class="separator:gab3e62d0320771141e199eeb36af09ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1388,9 +1428,6 @@ constexpr callable_fmod_&#160;</td><td class="memItemRight" valign="bottom"><b>f
 <tr class="memitem:gaa823eeef980dc21ff27d088758f98338"><td class="memItemLeft" align="right" valign="top">constexpr callable_sum_of_prod_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__accuracy_gaa823eeef980dc21ff27d088758f98338.html#gaa823eeef980dc21ff27d088758f98338">sum_of_prod</a> = {}</td></tr>
 <tr class="memdesc:gaa823eeef980dc21ff27d088758f98338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the sum of products operation with better accuracy than the naive formula.  <br /></td></tr>
 <tr class="separator:gaa823eeef980dc21ff27d088758f98338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1050443b632340373229d828b3fe9d7e"><td class="memItemLeft" align="right" valign="top">constexpr callable_swap_adjacent_groups_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core_ga1050443b632340373229d828b3fe9d7e.html#ga1050443b632340373229d828b3fe9d7e">swap_adjacent_groups</a> = {}</td></tr>
-<tr class="memdesc:ga1050443b632340373229d828b3fe9d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap adjacent groups of elements of chosen number.  <br /></td></tr>
-<tr class="separator:ga1050443b632340373229d828b3fe9d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga80d559963dc763b6d8b2350e4c4b0576"><td class="memItemLeft" align="right" valign="top">constexpr callable_swap_pairs_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__bitops_ga80d559963dc763b6d8b2350e4c4b0576.html#ga80d559963dc763b6d8b2350e4c4b0576">swap_pairs</a> = {}</td></tr>
 <tr class="memdesc:ga80d559963dc763b6d8b2350e4c4b0576"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap chosen pair of elements.  <br /></td></tr>
 <tr class="separator:ga80d559963dc763b6d8b2350e4c4b0576"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2010,6 +2047,66 @@ x_i\right)^{1/n} \).  <br /></td></tr>
 <tr class="memitem:ga5262bc83278d307e1c920cc1cb608838"><td class="memItemLeft" align="right" valign="top">constexpr callable_tchebytchev_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__polynomial_ga5262bc83278d307e1c920cc1cb608838.html#ga5262bc83278d307e1c920cc1cb608838">tchebytchev</a> = {}</td></tr>
 <tr class="memdesc:ga5262bc83278d307e1c920cc1cb608838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the value of the Tchebytchev polynomial of order <code>n</code> at <code>x</code>:  <br /></td></tr>
 <tr class="separator:ga5262bc83278d307e1c920cc1cb608838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae30417747d200c6393961e2e38397708"><td class="memItemLeft" align="right" valign="top">constexpr callable_angle_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_gae30417747d200c6393961e2e38397708.html#gae30417747d200c6393961e2e38397708">angle</a> = {}</td></tr>
+<tr class="memdesc:gae30417747d200c6393961e2e38397708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing angleinary part of values.  <br /></td></tr>
+<tr class="separator:gae30417747d200c6393961e2e38397708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc5948e381a3b4c178e8c8fb2e254497"><td class="memItemLeft" align="right" valign="top">constexpr callable_axis_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_gabc5948e381a3b4c178e8c8fb2e254497.html#gabc5948e381a3b4c178e8c8fb2e254497">axis</a> = {}</td></tr>
+<tr class="memdesc:gabc5948e381a3b4c178e8c8fb2e254497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing axisinary part of values.  <br /></td></tr>
+<tr class="separator:gabc5948e381a3b4c178e8c8fb2e254497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7208f166d28c70de0106887ac92c5227"><td class="memItemLeft" align="right" valign="top">constexpr right_type const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__decorators_ga7208f166d28c70de0106887ac92c5227.html#ga7208f166d28c70de0106887ac92c5227">right</a> = {}</td></tr>
+<tr class="memdesc:ga7208f166d28c70de0106887ac92c5227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Higher-order <a href="https://en.cppreference.com/w/cpp/named_req/Callable">Callable Object</a> imbuing more standard semantic onto other <a href="https://en.cppreference.com/w/cpp/named_req/Callable">Callable Objects</a>.  <br /></td></tr>
+<tr class="separator:ga7208f166d28c70de0106887ac92c5227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae04815c0bd88d9cd7ac82bd2083105dc"><td class="memItemLeft" align="right" valign="top">constexpr callable_from_cylindrical_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_gae04815c0bd88d9cd7ac82bd2083105dc.html#gae04815c0bd88d9cd7ac82bd2083105dc">from_cylindrical</a> = {}</td></tr>
+<tr class="memdesc:gae04815c0bd88d9cd7ac82bd2083105dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing a quaternion from its cylindrical representation.  <br /></td></tr>
+<tr class="separator:gae04815c0bd88d9cd7ac82bd2083105dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6804fdf4fb6fc3c9a8a26eb2078179e"><td class="memItemLeft" align="right" valign="top">constexpr callable_from_cylindrospherical_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_gab6804fdf4fb6fc3c9a8a26eb2078179e.html#gab6804fdf4fb6fc3c9a8a26eb2078179e">from_cylindrospherical</a> = {}</td></tr>
+<tr class="memdesc:gab6804fdf4fb6fc3c9a8a26eb2078179e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing a quaternion from its cylindrospherical representation.  <br /></td></tr>
+<tr class="separator:gab6804fdf4fb6fc3c9a8a26eb2078179e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea83d537d3c67558345d999dd975342a"><td class="memItemLeft" align="right" valign="top">constexpr callable_from_euler_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_gaea83d537d3c67558345d999dd975342a.html#gaea83d537d3c67558345d999dd975342a">from_euler</a> = {}</td></tr>
+<tr class="memdesc:gaea83d537d3c67558345d999dd975342a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing a quaternion from its euler representation.  <br /></td></tr>
+<tr class="separator:gaea83d537d3c67558345d999dd975342a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55de6b8fee6c5f88ab3275d48bd2a9e9"><td class="memItemLeft" align="right" valign="top">constexpr callable_from_rotation_matrix_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_ga55de6b8fee6c5f88ab3275d48bd2a9e9.html#ga55de6b8fee6c5f88ab3275d48bd2a9e9">from_rotation_matrix</a> = {}</td></tr>
+<tr class="memdesc:ga55de6b8fee6c5f88ab3275d48bd2a9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing a quaternion from its rotation_matrix representation.  <br /></td></tr>
+<tr class="separator:ga55de6b8fee6c5f88ab3275d48bd2a9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga14b76367534b7a9615eaadac3bf0669b"><td class="memItemLeft" align="right" valign="top">constexpr callable_from_semipolar_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_ga14b76367534b7a9615eaadac3bf0669b.html#ga14b76367534b7a9615eaadac3bf0669b">from_semipolar</a> = {}</td></tr>
+<tr class="memdesc:ga14b76367534b7a9615eaadac3bf0669b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing a quaternion from its semipolar representation.  <br /></td></tr>
+<tr class="separator:ga14b76367534b7a9615eaadac3bf0669b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2df5089d7b478677749d4ad47cebaaad"><td class="memItemLeft" align="right" valign="top">constexpr callable_from_spherical_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_ga2df5089d7b478677749d4ad47cebaaad.html#ga2df5089d7b478677749d4ad47cebaaad">from_spherical</a> = {}</td></tr>
+<tr class="memdesc:ga2df5089d7b478677749d4ad47cebaaad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing a quaternion from its spherical representation.  <br /></td></tr>
+<tr class="separator:ga2df5089d7b478677749d4ad47cebaaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2daca498356d4e95f30deaa8082b247f"><td class="memItemLeft" align="right" valign="top">constexpr callable_ipart_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_ga2daca498356d4e95f30deaa8082b247f.html#ga2daca498356d4e95f30deaa8082b247f">ipart</a> = {}</td></tr>
+<tr class="memdesc:ga2daca498356d4e95f30deaa8082b247f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing ipart part of values.  <br /></td></tr>
+<tr class="separator:ga2daca498356d4e95f30deaa8082b247f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8faaee7aaea7f16bee1648a5ff1dab66"><td class="memItemLeft" align="right" valign="top">constexpr callable_is_not_pure_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_ga8faaee7aaea7f16bee1648a5ff1dab66.html#ga8faaee7aaea7f16bee1648a5ff1dab66">is_not_pure</a> = {}</td></tr>
+<tr class="memdesc:ga8faaee7aaea7f16bee1648a5ff1dab66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing is_not_pureinary part of values.  <br /></td></tr>
+<tr class="separator:ga8faaee7aaea7f16bee1648a5ff1dab66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae676594ed9328b8b0d642e8562adeb04"><td class="memItemLeft" align="right" valign="top">constexpr callable_is_pure_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_gae676594ed9328b8b0d642e8562adeb04.html#gae676594ed9328b8b0d642e8562adeb04">is_pure</a> = {}</td></tr>
+<tr class="memdesc:gae676594ed9328b8b0d642e8562adeb04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing is_pureinary part of values.  <br /></td></tr>
+<tr class="separator:gae676594ed9328b8b0d642e8562adeb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92fa867109d12795bd69bb8a9d41868c"><td class="memItemLeft" align="right" valign="top">constexpr callable_jpart_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_ga92fa867109d12795bd69bb8a9d41868c.html#ga92fa867109d12795bd69bb8a9d41868c">jpart</a> = {}</td></tr>
+<tr class="memdesc:ga92fa867109d12795bd69bb8a9d41868c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing jpart part of values.  <br /></td></tr>
+<tr class="separator:ga92fa867109d12795bd69bb8a9d41868c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0fed5fc30632ff0454ed64e50b39e189"><td class="memItemLeft" align="right" valign="top">constexpr callable_kpart_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_ga0fed5fc30632ff0454ed64e50b39e189.html#ga0fed5fc30632ff0454ed64e50b39e189">kpart</a> = {}</td></tr>
+<tr class="memdesc:ga0fed5fc30632ff0454ed64e50b39e189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing kpart part of values.  <br /></td></tr>
+<tr class="separator:ga0fed5fc30632ff0454ed64e50b39e189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75d2302ac58ed3e3bc2e96d3051ddc37"><td class="memItemLeft" align="right" valign="top">constexpr callable_pure_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_ga75d2302ac58ed3e3bc2e96d3051ddc37.html#ga75d2302ac58ed3e3bc2e96d3051ddc37">pure</a> = {}</td></tr>
+<tr class="memdesc:ga75d2302ac58ed3e3bc2e96d3051ddc37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing pureinary part of values.  <br /></td></tr>
+<tr class="separator:ga75d2302ac58ed3e3bc2e96d3051ddc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e889cccfaca5d8adca1f4a060633f19"><td class="memItemLeft" align="right" valign="top">constexpr callable_purepart_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_ga2e889cccfaca5d8adca1f4a060633f19.html#ga2e889cccfaca5d8adca1f4a060633f19">purepart</a> = {}</td></tr>
+<tr class="memdesc:ga2e889cccfaca5d8adca1f4a060633f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing purepart part of values.  <br /></td></tr>
+<tr class="separator:ga2e889cccfaca5d8adca1f4a060633f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6fbb7b021f402f8ca91e2ca2f63f63b2"><td class="memItemLeft" align="right" valign="top">constexpr callable_slerp_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_ga6fbb7b021f402f8ca91e2ca2f63f63b2.html#ga6fbb7b021f402f8ca91e2ca2f63f63b2">slerp</a> = {}</td></tr>
+<tr class="memdesc:ga6fbb7b021f402f8ca91e2ca2f63f63b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing slerpinary part of values.  <br /></td></tr>
+<tr class="separator:ga6fbb7b021f402f8ca91e2ca2f63f63b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab95990e1aa5195d0751c87e1a171cab5"><td class="memItemLeft" align="right" valign="top">constexpr callable_squad_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_gab95990e1aa5195d0751c87e1a171cab5.html#gab95990e1aa5195d0751c87e1a171cab5">squad</a> = {}</td></tr>
+<tr class="memdesc:gab95990e1aa5195d0751c87e1a171cab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing squadinary part of values.  <br /></td></tr>
+<tr class="separator:gab95990e1aa5195d0751c87e1a171cab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43b96d8a2fbf685b289426483126203a"><td class="memItemLeft" align="right" valign="top">constexpr callable_to_euler_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_ga43b96d8a2fbf685b289426483126203a.html#ga43b96d8a2fbf685b289426483126203a">to_euler</a> = {}</td></tr>
+<tr class="memdesc:ga43b96d8a2fbf685b289426483126203a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing euler angles from a quaternion.  <br /></td></tr>
+<tr class="separator:ga43b96d8a2fbf685b289426483126203a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac83674449e5cdee09a1c55fac3da53c1"><td class="memItemLeft" align="right" valign="top">constexpr callable_to_rotation_matrix_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__quaternion_gac83674449e5cdee09a1c55fac3da53c1.html#gac83674449e5cdee09a1c55fac3da53c1">to_rotation_matrix</a> = {}</td></tr>
+<tr class="memdesc:gac83674449e5cdee09a1c55fac3da53c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable object computing a quaternion from its to_rotation_matrix representation.  <br /></td></tr>
+<tr class="separator:gac83674449e5cdee09a1c55fac3da53c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga28cfdcc15a0eb0150019bbc1e6652ceb"><td class="memItemLeft" align="right" valign="top">constexpr callable_beta_&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__special_ga28cfdcc15a0eb0150019bbc1e6652ceb.html#ga28cfdcc15a0eb0150019bbc1e6652ceb">beta</a> = {}</td></tr>
 <tr class="memdesc:ga28cfdcc15a0eb0150019bbc1e6652ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the beta function: \(\displaystyle \mathbf{B}(x, y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}\) is returned.  <br /></td></tr>
 <tr class="separator:ga28cfdcc15a0eb0150019bbc1e6652ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2101,6 +2198,10 @@ x_i\right)^{1/n} \).  <br /></td></tr>
 constexpr std::ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><b>na_</b> = -1</td></tr>
 <tr class="memdesc:ga11b65eff854b205c9f9ef8dbd559bb9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag for zeroing swizzle index. <br /></td></tr>
 <tr class="separator:ga11b65eff854b205c9f9ef8dbd559bb9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6c3c30138d82ef45b1bbcf9e65145d4"><td class="memItemLeft" align="right" valign="top">
+constexpr std::ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><b>we_</b> = -2</td></tr>
+<tr class="memdesc:gab6c3c30138d82ef45b1bbcf9e65145d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag for indicating to a shuffle that the value doesn't matter. <br /></td></tr>
+<tr class="separator:gab6c3c30138d82ef45b1bbcf9e65145d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga61c6484edbe5ceb7f92946bc798802dd"><td class="memTemplParams" colspan="2">
 template&lt;std::ptrdiff_t... I&gt; </td></tr>
 <tr class="memitem:ga61c6484edbe5ceb7f92946bc798802dd"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>pattern</b> = <a class="el" href="structeve_1_1pattern__t.html">pattern_t</a>&lt;I...&gt;{}</td></tr>

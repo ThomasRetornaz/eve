@@ -4,6 +4,9 @@ var hierarchy =
     [ "eve::aligned_allocator< T, Lanes >", "structeve_1_1aligned__allocator.html", null ],
     [ "eve::aligned_ptr< Type, Lanes >", "structeve_1_1aligned__ptr.html", null ],
     [ "eve::as< T >", "structeve_1_1as.html", null ],
+    [ "eve::as< element_type_t< T > >", "structeve_1_1as.html", [
+      [ "eve::as_element< T >", "structeve_1_1as__element.html", null ]
+    ] ],
     [ "eve::as_pattern< F >", "structeve_1_1as__pattern.html", null ],
     [ "backward_iterator", "structbackward__iterator.html", null ],
     [ "eve::algo::views::backward_iterator< I >", "structeve_1_1algo_1_1views_1_1backward__iterator.html", null ],
@@ -60,10 +63,14 @@ var hierarchy =
     [ "eve::algo::views::reverse_range< R >", "structeve_1_1algo_1_1views_1_1reverse__range.html", null ],
     [ "reverse_range", "structreverse__range.html", null ],
     [ "eve::soa_ptr< Ptrs >", "structeve_1_1soa__ptr.html", null ],
+    [ "eve::algo::soa_vector< Type, Allocator >", "structeve_1_1algo_1_1soa__vector.html", null ],
     [ "eve::stack_buffer< T >", "structeve_1_1stack__buffer.html", null ],
     [ "eve::struct_support< Self, Fields >", "structeve_1_1struct__support.html", null ],
     [ "eve::struct_support< complex< Type >, Type, Type >", "structeve_1_1struct__support.html", [
       [ "eve::complex< Type >", "structeve_1_1complex.html", null ]
+    ] ],
+    [ "eve::struct_support< quaternion< Type >, Type, Type, Type, Type >", "structeve_1_1struct__support.html", [
+      [ "eve::quaternion< Type >", "structeve_1_1quaternion.html", null ]
     ] ],
     [ "eve::support_options< Tag >", "structeve_1_1support__options.html", null ],
     [ "eve::supports_like< Wrapper, Self >", "structeve_1_1supports__like.html", null ],

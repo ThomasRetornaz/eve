@@ -18,7 +18,7 @@ var group__simd__types =
     ] ],
     [ "eve::logical< wide< Type, Cardinal > >", "structeve_1_1logical_3_01wide_3_01Type_00_01Cardinal_01_4_01_4.html", [
       [ "abi_type", "structeve_1_1logical_3_01wide_3_01Type_00_01Cardinal_01_4_01_4.html#aac957e33daa41b5a3f551ed78c05c100", null ],
-      [ "bits_type", "structeve_1_1logical_3_01wide_3_01Type_00_01Cardinal_01_4_01_4.html#adb0e98ce3f9d38e138e3055cada7d4e3", null ],
+      [ "bits_type", "structeve_1_1logical_3_01wide_3_01Type_00_01Cardinal_01_4_01_4.html#a12f93e894ed656207297404449381d25", null ],
       [ "cardinal_type", "structeve_1_1logical_3_01wide_3_01Type_00_01Cardinal_01_4_01_4.html#a1c043e9a2264e6257e715022ffbbe9a9", null ],
       [ "mask_type", "structeve_1_1logical_3_01wide_3_01Type_00_01Cardinal_01_4_01_4.html#a552251c1f51965f56d96414cc8f933c8", null ],
       [ "rebind", "structeve_1_1logical_3_01wide_3_01Type_00_01Cardinal_01_4_01_4.html#a814d09107a0280ceb564cf053d075dee", null ],
@@ -133,7 +133,9 @@ var group__simd__types =
       [ "operator<", "structeve_1_1wide.html#a9abb8905b9a063ce5c18add352d7a122", null ],
       [ "operator<", "structeve_1_1wide.html#a01573fbcf76e04995cf6f5b88a902bec", null ],
       [ "operator<<", "structeve_1_1wide.html#ab3d742b27eea1a869eb7cfa2f1a83547", null ],
+      [ "operator<<", "structeve_1_1wide.html#a31de374c767478c8a02dd2fe26a5fd7b", null ],
       [ "operator<<", "structeve_1_1wide.html#a0952de838b35b55b415b1d5b898c9d63", null ],
+      [ "operator<<=", "structeve_1_1wide.html#acca1cc45109f802d4e87dcbf54d8f830", null ],
       [ "operator<<=", "structeve_1_1wide.html#ac4a63d4983d7b90347131decf5c5e9f7", null ],
       [ "operator<=", "structeve_1_1wide.html#a99edd5276b11e2a30955f29ab5b24690", null ],
       [ "operator<=", "structeve_1_1wide.html#acfa7ac70bc5090bdd18397bb406b13cc", null ],
@@ -147,7 +149,9 @@ var group__simd__types =
       [ "operator>=", "structeve_1_1wide.html#ad6720aef32fc9eed12daf564bf1fadfe", null ],
       [ "operator>=", "structeve_1_1wide.html#a3ea7bf48bce3481d546af5be1420e563", null ],
       [ "operator>=", "structeve_1_1wide.html#a5723a515922926a4469b1876d4890d81", null ],
+      [ "operator>>", "structeve_1_1wide.html#af9b0615905a9b32ce7e28ce8ae75d177", null ],
       [ "operator>>", "structeve_1_1wide.html#a0be60111aec8c0aef7ab33b1d8d33066", null ],
+      [ "operator>>=", "structeve_1_1wide.html#aa5a999085894b54da396888ad36831d5", null ],
       [ "operator>>=", "structeve_1_1wide.html#a1a831cbe7560dd4e9813185797a68c31", null ],
       [ "operator^", "structeve_1_1wide.html#a907dff44bdca625423b14cabb27b5385", null ],
       [ "operator^", "structeve_1_1wide.html#a639a7dd4e74a426b1bf3ba1ad026f458", null ],
@@ -174,6 +178,12 @@ var group__simd__types =
       [ "complex", "structeve_1_1complex.html#aec33f14db29f24c36695953c7285588a", null ],
       [ "operator<<", "structeve_1_1complex.html#a0aef00cfb869cd94127c7c17703c9935", null ]
     ] ],
+    [ "eve::quaternion< Type >", "structeve_1_1quaternion.html", [
+      [ "underlying_type", "structeve_1_1quaternion.html#a5e89c547a13cc15bebb4c6798db5e49a", null ],
+      [ "value_type", "structeve_1_1quaternion.html#a942a01e7b1709f071d6bb0d85a0e49d2", null ],
+      [ "quaternion", "structeve_1_1quaternion.html#a5f4380a4d7d76718dcefaf727ebebbc9", null ],
+      [ "operator<<", "structeve_1_1quaternion.html#a3cd002cd3fcf09aec62f8aa864010808", null ]
+    ] ],
     [ "eve::pattern_t< I >", "structeve_1_1pattern__t.html", [
       [ "operator!=", "structeve_1_1pattern__t.html#a490329fb584803b715c1a5b3cd843e35", null ],
       [ "operator()", "structeve_1_1pattern__t.html#a3548551170354714cada3dea156fceb2", null ],
@@ -190,5 +200,6 @@ var group__simd__types =
     ] ],
     [ "eve::wide_cardinal", "concepteve_1_1wide__cardinal.html", null ],
     [ "eve::na_", "group__simd__types.html#ga11b65eff854b205c9f9ef8dbd559bb9b", null ],
-    [ "eve::pattern", "group__simd__types.html#ga61c6484edbe5ceb7f92946bc798802dd", null ]
+    [ "eve::pattern", "group__simd__types.html#ga61c6484edbe5ceb7f92946bc798802dd", null ],
+    [ "eve::we_", "group__simd__types.html#gab6c3c30138d82ef45b1bbcf9e65145d4", null ]
 ];

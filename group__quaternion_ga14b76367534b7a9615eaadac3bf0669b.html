@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>E.V.E: eve::swap_adjacent_groups</title>
+<title>E.V.E: eve::from_semipolar</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('group__core_ga1050443b632340373229d828b3fe9d7e.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('group__quaternion_ga14b76367534b7a9615eaadac3bf0669b.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -121,8 +121,8 @@ $(document).ready(function(){initNavTree('group__core_ga1050443b632340373229d828
 </div>
 
 <div class="contents">
-<a id="ga1050443b632340373229d828b3fe9d7e" name="ga1050443b632340373229d828b3fe9d7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1050443b632340373229d828b3fe9d7e">&#9670;&#160;</a></span>swap_adjacent_groups</h2>
+<a id="ga14b76367534b7a9615eaadac3bf0669b" name="ga14b76367534b7a9615eaadac3bf0669b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga14b76367534b7a9615eaadac3bf0669b">&#9670;&#160;</a></span>from_semipolar</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('group__core_ga1050443b632340373229d828
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">eve::swap_adjacent_groups = {}</td>
+          <td class="memname">eve::from_semipolar = {}</td>
         </tr>
       </table>
   </td>
@@ -140,50 +140,60 @@ $(document).ready(function(){initNavTree('group__core_ga1050443b632340373229d828
   </tr>
 </table>
 </div><div class="memdoc">
-<p><b>Defined in Header</b></p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;eve/module/core.hpp&gt;</span></div>
+<p>This function build quaternions in a way similar to the way polar builds complex numbers from a semipolar representation of an \(\mathbb{R}^4\) element.</p>
+<p>from_semipolar takes as a first input the magnitude of the quaternion, as a second input an angle in the range 0 to \(\pi/2\) such that magnitudes of the first two \(\mathbb{C}\) components of the quaternion are the product of the first input and the sine and cosine of this angle, respectively, and finally as third and fourth inputs angles in the range \(-\pi/2\) to \(+\pi/2\) which represent the arguments of the first and second \(\mathbb{C}\) components of the quaternion, respectively.</p>
+<p><b>Defined in header</b></p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include eve/module/quaternion.hpp&gt;`</span></div>
 </div><!-- fragment --><h2 class="groupheader">Callable Signatures </h2>
 <div class="fragment"><div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceeve.html">eve</a></div>
 <div class="line">{</div>
-<div class="line">   <span class="keyword">template</span>&lt;simd_value T, std::ptrdiff_t N&gt;</div>
-<div class="line">   T swap_adjacent groups(T x, <a class="code hl_struct" href="structeve_1_1fixed.html">fixed&lt;N&gt;</a> <span class="keyword">const</span> &amp;) <span class="keyword">noexcept</span>;</div>
+<div class="line">  <span class="keyword">auto</span> <a class="code hl_variable" href="group__quaternion_ga14b76367534b7a9615eaadac3bf0669b.html#ga14b76367534b7a9615eaadac3bf0669b">from_semipolar</a>(<span class="keyword">auto</span> rho, <span class="keyword">auto</span> alpha <span class="keyword">auto</span> theta1, <span class="keyword">auto</span> theta2) <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__quaternion_ga14b76367534b7a9615eaadac3bf0669b_html_ga14b76367534b7a9615eaadac3bf0669b"><div class="ttname"><a href="group__quaternion_ga14b76367534b7a9615eaadac3bf0669b.html#ga14b76367534b7a9615eaadac3bf0669b">eve::from_semipolar</a></div><div class="ttdeci">constexpr callable_from_semipolar_ from_semipolar</div><div class="ttdoc">Callable object computing a quaternion from its semipolar representation.</div><div class="ttdef"><b>Definition:</b> from_semipolar.hpp:63</div></div>
 <div class="ttc" id="anamespaceeve_html"><div class="ttname"><a href="namespaceeve.html">eve</a></div><div class="ttdef"><b>Definition:</b> abi.hpp:18</div></div>
-<div class="ttc" id="astructeve_1_1fixed_html"><div class="ttname"><a href="structeve_1_1fixed.html">eve::fixed</a></div><div class="ttdoc">SIMD register cardinal type.</div><div class="ttdef"><b>Definition:</b> cardinals.hpp:39</div></div>
 </div><!-- fragment --><p><b>Parameters</b></p>
 <ul>
-<li><code>x</code> : <a class="el" href="concepteve_1_1integral__value.html">argument</a>.</li>
-<li><code>N</code> : number of elements in group</li>
+<li><code>rho</code>: the modulus</li>
+<li><code>alpha</code>, <code>theta1</code>, <code>theta2</code>: angles in radian</li>
 </ul>
 <p><b>Return value</b></p>
-<p>Return x where groups with contiguous groups of N elements swapped for N = 0 or cardinal_v&lt;T&gt; acts as noop.</p>
+<p>the quaternion value representing the \(\R^4\) element.</p>
 <h2 class="groupheader">Example </h2>
-<div class="fragment"><div class="line"> </div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;eve/module/quaternion.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;eve/wide.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;eve/module/core.hpp&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">using </span>wide_it = <a class="code hl_struct" href="structeve_1_1wide.html">eve::wide&lt;std::uint64_t, eve::fixed&lt;8&gt;</a>&gt;;</div>
+<div class="line"><span class="keyword">using </span>wide_ft = eve::wide &lt;float, eve::fixed&lt;4&gt;&gt;;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">  wide_it <a class="code hl_variable" href="group__math__constants_gaa262556a49cd7daf77138a7a636e737f.html#gaa262556a49cd7daf77138a7a636e737f">pi</a> = {1, 2, 3, 4, 5, 6, 7, 8};</div>
-<div class="line">  <span class="keyword">constexpr</span> <span class="keyword">auto</span> _1 = <a class="code hl_struct" href="structeve_1_1fixed.html">eve::fixed&lt;1&gt;</a>();</div>
-<div class="line">  <span class="keyword">constexpr</span> <span class="keyword">auto</span> _2 = <a class="code hl_struct" href="structeve_1_1fixed.html">eve::fixed&lt;2&gt;</a>();</div>
-<div class="line">  <span class="keyword">constexpr</span> <span class="keyword">auto</span> _4 = <a class="code hl_struct" href="structeve_1_1fixed.html">eve::fixed&lt;4&gt;</a>();</div>
-<div class="line">  <span class="keyword">constexpr</span> <span class="keyword">auto</span> _8 = <a class="code hl_struct" href="structeve_1_1fixed.html">eve::fixed&lt;8&gt;</a>();</div>
+<div class="line">  wide_ft a = { 0.0f, 1.0f, -1.0f, 0.5f};</div>
+<div class="line">  wide_ft b = { 2.0f , -1.0,  -5.0, 0.0};</div>
+<div class="line">  wide_ft c = { 1.0f, -3.0f,  -4.0f, 1.5f};</div>
+<div class="line">  wide_ft d = { -2.0, 1.5f, 2.3f, 6.7f};</div>
+<div class="line">  wide_ft r1= { 1.0f, 2.0f, 3.0f,  0.0f};</div>
+<div class="line">  wide_ft r2= { 0.0f, 3.0f, 4.0f, 10.0f};</div>
 <div class="line"> </div>
-<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;---- simd&quot;</span> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span></div>
-<div class="line">            &lt;&lt; <span class="stringliteral">&quot;&lt;- pi              = &quot;</span> &lt;&lt; <a class="code hl_variable" href="group__math__constants_gaa262556a49cd7daf77138a7a636e737f.html#gaa262556a49cd7daf77138a7a636e737f">pi</a> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span></div>
-<div class="line">            &lt;&lt; <span class="stringliteral">&quot;-&gt; swap_adjacent_groups(pi, _1) = &quot;</span> &lt;&lt; <a class="code hl_variable" href="group__core_ga1050443b632340373229d828b3fe9d7e.html#ga1050443b632340373229d828b3fe9d7e">eve::swap_adjacent_groups</a>(<a class="code hl_variable" href="group__math__constants_gaa262556a49cd7daf77138a7a636e737f.html#gaa262556a49cd7daf77138a7a636e737f">pi</a>, _1) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span></div>
-<div class="line">            &lt;&lt; <span class="stringliteral">&quot;-&gt; swap_adjacent_groups(pi, _2) = &quot;</span> &lt;&lt; <a class="code hl_variable" href="group__core_ga1050443b632340373229d828b3fe9d7e.html#ga1050443b632340373229d828b3fe9d7e">eve::swap_adjacent_groups</a>(<a class="code hl_variable" href="group__math__constants_gaa262556a49cd7daf77138a7a636e737f.html#gaa262556a49cd7daf77138a7a636e737f">pi</a>, _2) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span></div>
-<div class="line">            &lt;&lt; <span class="stringliteral">&quot;-&gt; swap_adjacent_groups(pi, _4) = &quot;</span> &lt;&lt; <a class="code hl_variable" href="group__core_ga1050443b632340373229d828b3fe9d7e.html#ga1050443b632340373229d828b3fe9d7e">eve::swap_adjacent_groups</a>(<a class="code hl_variable" href="group__math__constants_gaa262556a49cd7daf77138a7a636e737f.html#gaa262556a49cd7daf77138a7a636e737f">pi</a>, _4) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span></div>
-<div class="line">            &lt;&lt; <span class="stringliteral">&quot;-&gt; swap_adjacent_groups(pi, _8) = &quot;</span> &lt;&lt; <a class="code hl_variable" href="group__core_ga1050443b632340373229d828b3fe9d7e.html#ga1050443b632340373229d828b3fe9d7e">eve::swap_adjacent_groups</a>(<a class="code hl_variable" href="group__math__constants_gaa262556a49cd7daf77138a7a636e737f.html#gaa262556a49cd7daf77138a7a636e737f">pi</a>, _8) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span></div>
-<div class="line">;</div>
+<div class="line">  std::cout</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;---- simd&quot;</span> &lt;&lt; std::endl</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;&lt;- a                               = &quot;</span> &lt;&lt; a &lt;&lt; std::endl</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;&lt;- b                               = &quot;</span> &lt;&lt; b &lt;&lt; std::endl</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;&lt;- c                               = &quot;</span> &lt;&lt; c &lt;&lt; std::endl</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;&lt;- d                               = &quot;</span> &lt;&lt; d &lt;&lt; std::endl</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;&lt;- r1                              = &quot;</span> &lt;&lt; c &lt;&lt; std::endl</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;&lt;- r2                              = &quot;</span> &lt;&lt; d &lt;&lt; std::endl</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;-&gt; cylindrical(r1, b, c, d)        = &quot;</span> &lt;&lt; <a class="code hl_variable" href="group__quaternion_gae04815c0bd88d9cd7ac82bd2083105dc.html#gae04815c0bd88d9cd7ac82bd2083105dc">eve::from_cylindrical</a>(r1, b, c, d) &lt;&lt; std::endl</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;-&gt; cylindrospherical(r1, r2, c, d) = &quot;</span> &lt;&lt; <a class="code hl_variable" href="group__quaternion_gab6804fdf4fb6fc3c9a8a26eb2078179e.html#gab6804fdf4fb6fc3c9a8a26eb2078179e">eve::from_cylindrospherical</a>(r1, r2, c, d) &lt;&lt; std::endl</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;-&gt; multipolar(r1, c, r2, d)        = &quot;</span> &lt;&lt; eve::from_multipolar(r1, c, r2, d) &lt;&lt; std::endl</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;-&gt; semipolar(r1, b, c, d)          = &quot;</span> &lt;&lt; <a class="code hl_variable" href="group__quaternion_ga14b76367534b7a9615eaadac3bf0669b.html#ga14b76367534b7a9615eaadac3bf0669b">eve::from_semipolar</a>(r1, b, c, d) &lt;&lt; std::endl</div>
+<div class="line">    &lt;&lt; <span class="stringliteral">&quot;-&gt; spherical(r1, b, c, d)          = &quot;</span> &lt;&lt; <a class="code hl_variable" href="group__quaternion_ga2df5089d7b478677749d4ad47cebaaad.html#ga2df5089d7b478677749d4ad47cebaaad">eve::from_spherical</a>(r1, b, c, d) &lt;&lt; std::endl</div>
+<div class="line">   ;</div>
 <div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__core_ga1050443b632340373229d828b3fe9d7e_html_ga1050443b632340373229d828b3fe9d7e"><div class="ttname"><a href="group__core_ga1050443b632340373229d828b3fe9d7e.html#ga1050443b632340373229d828b3fe9d7e">eve::swap_adjacent_groups</a></div><div class="ttdeci">constexpr callable_swap_adjacent_groups_ swap_adjacent_groups</div><div class="ttdoc">swap adjacent groups of elements of chosen number.</div><div class="ttdef"><b>Definition:</b> swap_adjacent_groups.hpp:53</div></div>
-<div class="ttc" id="agroup__math__constants_gaa262556a49cd7daf77138a7a636e737f_html_gaa262556a49cd7daf77138a7a636e737f"><div class="ttname"><a href="group__math__constants_gaa262556a49cd7daf77138a7a636e737f.html#gaa262556a49cd7daf77138a7a636e737f">eve::pi</a></div><div class="ttdeci">constexpr callable_pi_ pi</div><div class="ttdoc">Callable object computing the constant .</div><div class="ttdef"><b>Definition:</b> pi.hpp:49</div></div>
-<div class="ttc" id="astructeve_1_1wide_html"><div class="ttname"><a href="structeve_1_1wide.html">eve::wide</a></div><div class="ttdoc">Wrapper for SIMD registers.</div><div class="ttdef"><b>Definition:</b> wide.hpp:65</div></div>
+<div class="ttc" id="agroup__quaternion_ga2df5089d7b478677749d4ad47cebaaad_html_ga2df5089d7b478677749d4ad47cebaaad"><div class="ttname"><a href="group__quaternion_ga2df5089d7b478677749d4ad47cebaaad.html#ga2df5089d7b478677749d4ad47cebaaad">eve::from_spherical</a></div><div class="ttdeci">constexpr callable_from_spherical_ from_spherical</div><div class="ttdoc">Callable object computing a quaternion from its spherical representation.</div><div class="ttdef"><b>Definition:</b> from_spherical.hpp:64</div></div>
+<div class="ttc" id="agroup__quaternion_gab6804fdf4fb6fc3c9a8a26eb2078179e_html_gab6804fdf4fb6fc3c9a8a26eb2078179e"><div class="ttname"><a href="group__quaternion_gab6804fdf4fb6fc3c9a8a26eb2078179e.html#gab6804fdf4fb6fc3c9a8a26eb2078179e">eve::from_cylindrospherical</a></div><div class="ttdeci">constexpr callable_from_cylindrospherical_ from_cylindrospherical</div><div class="ttdoc">Callable object computing a quaternion from its cylindrospherical representation.</div><div class="ttdef"><b>Definition:</b> from_cylindrospherical.hpp:63</div></div>
+<div class="ttc" id="agroup__quaternion_gae04815c0bd88d9cd7ac82bd2083105dc_html_gae04815c0bd88d9cd7ac82bd2083105dc"><div class="ttname"><a href="group__quaternion_gae04815c0bd88d9cd7ac82bd2083105dc.html#gae04815c0bd88d9cd7ac82bd2083105dc">eve::from_cylindrical</a></div><div class="ttdeci">constexpr callable_from_cylindrical_ from_cylindrical</div><div class="ttdoc">Callable object computing a quaternion from its cylindrical representation.</div><div class="ttdef"><b>Definition:</b> from_cylindrical.hpp:62</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
