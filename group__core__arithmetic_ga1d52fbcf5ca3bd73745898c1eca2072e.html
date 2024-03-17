@@ -151,20 +151,20 @@ $(document).ready(function(){initNavTree('group__core__arithmetic_ga1d52fbcf5ca3
 <div class="line">   <span class="keyword">template</span>&lt; <a class="code hl_concept" href="concepteve_1_1floating__value.html">eve::floating_value</a> Ts ... &gt;</div>
 <div class="line">   <a class="code hl_typedef" href="namespaceeve.html#af8e498b268c1b3dad8c2ab481a35c0bc">eve::common_value_t</a>&lt;Ts ...&gt; <a class="code hl_variable" href="group__core__arithmetic_ga1d52fbcf5ca3bd73745898c1eca2072e.html#ga1d52fbcf5ca3bd73745898c1eca2072e">average</a>(Ts ... xs) <span class="keyword">noexcept</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aconcepteve_1_1floating__value_html"><div class="ttname"><a href="concepteve_1_1floating__value.html">eve::floating_value</a></div><div class="ttdef"><b>Definition:</b> value.hpp:83</div></div>
+<div class="ttc" id="aconcepteve_1_1floating__value_html"><div class="ttname"><a href="concepteve_1_1floating__value.html">eve::floating_value</a></div><div class="ttdef"><b>Definition:</b> value.hpp:90</div></div>
 <div class="ttc" id="agroup__core__arithmetic_ga1d52fbcf5ca3bd73745898c1eca2072e_html_ga1d52fbcf5ca3bd73745898c1eca2072e"><div class="ttname"><a href="group__core__arithmetic_ga1d52fbcf5ca3bd73745898c1eca2072e.html#ga1d52fbcf5ca3bd73745898c1eca2072e">eve::average</a></div><div class="ttdeci">constexpr callable_average_ average</div><div class="ttdoc">Computes the arithmetic mean of its arguments.</div><div class="ttdef"><b>Definition:</b> average.hpp:91</div></div>
-<div class="ttc" id="anamespaceeve_html"><div class="ttname"><a href="namespaceeve.html">eve</a></div><div class="ttdef"><b>Definition:</b> abi.hpp:18</div></div>
+<div class="ttc" id="anamespaceeve_html"><div class="ttname"><a href="namespaceeve.html">eve</a></div><div class="ttdoc">EVE Main Namespace.</div><div class="ttdef"><b>Definition:</b> abi.hpp:18</div></div>
 <div class="ttc" id="anamespaceeve_html_af8e498b268c1b3dad8c2ab481a35c0bc"><div class="ttname"><a href="namespaceeve.html#af8e498b268c1b3dad8c2ab481a35c0bc">eve::common_value_t</a></div><div class="ttdeci">typename eve::detail::common_value_impl&lt; void, Ts... &gt;::type common_value_t</div><div class="ttdoc">Computes the SIMD-compatible common type between all Ts.</div><div class="ttdef"><b>Definition:</b> common_value.hpp:50</div></div>
 </div><!-- fragment --><p><b>Parameters</b></p>
 <ul>
-<li><code>x</code>, <code>y</code>: <a class="el" href="concepteve_1_1value.html">real</a> or <a class="el" href="structeve_1_1complex.html">complex</a> arguments.</li>
-<li><code>xs...</code> : <a class="el" href="concepteve_1_1floating__value.html">real</a> or <a class="el" href="structeve_1_1complex.html">complex</a> arguments.</li>
+<li><code>x</code>, <code>y</code>: <a class="el" href="concepteve_1_1value.html">real</a> arguments.</li>
+<li><code>xs...</code> : <a class="el" href="concepteve_1_1floating__value.html">real</a> arguments.</li>
 </ul>
 <p><b>Return value</b></p>
 <p>The value of the arithmetic mean of the arguments is returned.</p>
 <dl class="section note"><dt>Note</dt><dd><ul>
 <li>For two parameters half the sum of <code>x</code> and <code>y</code>. No overflow occurs.</li>
-<li>For more than two parameters only floating or complex entries are allowed. No overflow occurs.</li>
+<li>For more than two parameters only floating entries are allowed. No overflow occurs.</li>
 <li>If <code>x</code> and <code>y</code> are <a class="el" href="concepteve_1_1integral__value.html">integral values</a> and the sum is odd, the result is a rounded value at a distance guaranteed to be less than or equal to 0.5 of the average floating value, but may differ by unity from the truncation given by <code>(x+y)/2</code>. Moreover, as some architectures provide simd intrinsics to perform the operation, the scalar results may differ by one unit from simd ones which are system dependent. However the dowward (respectively upward) decorators can be used to ensure the result is <code>floor((x+y)/2)</code>, (respectively <code>ceil((x+y)/2)</code>).</li>
 </ul>
 </dd></dl>
@@ -211,7 +211,7 @@ $(document).ready(function(){initNavTree('group__core__arithmetic_ga1d52fbcf5ca3
 <div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;---- multi parameters&quot;</span> &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__math__constants_gaa262556a49cd7daf77138a7a636e737f_html_gaa262556a49cd7daf77138a7a636e737f"><div class="ttname"><a href="group__math__constants_gaa262556a49cd7daf77138a7a636e737f.html#gaa262556a49cd7daf77138a7a636e737f">eve::pi</a></div><div class="ttdeci">constexpr callable_pi_ pi</div><div class="ttdoc">Callable object computing the constant .</div><div class="ttdef"><b>Definition:</b> pi.hpp:49</div></div>
+<div class="ttc" id="agroup__math__constants_gaa262556a49cd7daf77138a7a636e737f_html_gaa262556a49cd7daf77138a7a636e737f"><div class="ttname"><a href="group__math__constants_gaa262556a49cd7daf77138a7a636e737f.html#gaa262556a49cd7daf77138a7a636e737f">eve::pi</a></div><div class="ttdeci">constexpr auto pi</div><div class="ttdoc">Callable object computing the constant .</div><div class="ttdef"><b>Definition:</b> pi.hpp:77</div></div>
 <div class="ttc" id="astructeve_1_1wide_html"><div class="ttname"><a href="structeve_1_1wide.html">eve::wide</a></div><div class="ttdoc">Wrapper for SIMD registers.</div><div class="ttdef"><b>Definition:</b> wide.hpp:65</div></div>
 </div><!-- fragment --><h2 class="groupheader">Semantic Modifiers </h2>
 <ul>
@@ -260,7 +260,7 @@ $(document).ready(function(){initNavTree('group__core__arithmetic_ga1d52fbcf5ca3
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__core__constants_ga062b9f19ac5294101b1ca1a70583b2a2_html_ga062b9f19ac5294101b1ca1a70583b2a2"><div class="ttname"><a href="group__core__constants_ga062b9f19ac5294101b1ca1a70583b2a2.html#ga062b9f19ac5294101b1ca1a70583b2a2">eve::valmax</a></div><div class="ttdeci">constexpr callable_valmax_ valmax</div><div class="ttdoc">Computes the the greatest representable value.</div><div class="ttdef"><b>Definition:</b> valmax.hpp:55</div></div>
+<div class="ttc" id="agroup__core__constants_ga062b9f19ac5294101b1ca1a70583b2a2_html_ga062b9f19ac5294101b1ca1a70583b2a2"><div class="ttname"><a href="group__core__constants_ga062b9f19ac5294101b1ca1a70583b2a2.html#ga062b9f19ac5294101b1ca1a70583b2a2">eve::valmax</a></div><div class="ttdeci">constexpr auto valmax</div><div class="ttdoc">Computes the the greatest representable value.</div><div class="ttdef"><b>Definition:</b> valmax.hpp:68</div></div>
 <div class="ttc" id="agroup__core__decorators_gaa19d9ce08b61f17096366e2e638e6cc3_html_gaa19d9ce08b61f17096366e2e638e6cc3"><div class="ttname"><a href="group__core__decorators_gaa19d9ce08b61f17096366e2e638e6cc3.html#gaa19d9ce08b61f17096366e2e638e6cc3">eve::raw</a></div><div class="ttdeci">constexpr raw_type const raw</div><div class="ttdoc">Higher-order Callable Object imbuing quick and dirty behaviour onto other Callable Objects.</div><div class="ttdef"><b>Definition:</b> raw.hpp:43</div></div>
 <div class="ttc" id="astructeve_1_1as_html"><div class="ttname"><a href="structeve_1_1as.html">eve::as</a></div><div class="ttdoc">Lightweight type-wrapper.</div><div class="ttdef"><b>Definition:</b> as.hpp:29</div></div>
 </div><!-- fragment --> </li>
