@@ -32,7 +32,8 @@ var NAVTREE =
         [ "Basic Operations", "intro-01.html", null ],
         [ "Algorithms", "intro-02.html", null ],
         [ "Tuples", "intro-03.html", null ],
-        [ "Data Structures", "intro-04.html", null ]
+        [ "Data Structures", "intro-04.html", null ],
+        [ "Quadratics resolution", "intro-05.html", null ]
       ] ],
       [ "Specific Idioms", "usergroup2.html", [
         [ "Conditional Operations", "conditional.html", null ],
@@ -124,5 +125,6 @@ var NAVTREEINDEX =
 "algo_rationale.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';

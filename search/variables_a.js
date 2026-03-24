@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['khinchin_0',['khinchin',['../group__math__constants_gad32bbc77b245754ed40e0d855da6b08e.html#gad32bbc77b245754ed40e0d855da6b08e',1,'eve']]],
-  ['kind_5f1_1',['kind_1',['../group__polynomial_ga2f8b95159d4e36163c98074b5d9ed14a.html#ga2f8b95159d4e36163c98074b5d9ed14a',1,'eve']]],
-  ['kind_5f2_2',['kind_2',['../group__polynomial_gad08a257dca4c3f388a56941c57cebbed.html#gad08a257dca4c3f388a56941c57cebbed',1,'eve']]]
+  ['keep_5fif_0',['keep_if',['../group__algos_ga1dfaa1ff5ad47985d1b0a624ba4404b9.html#ga1dfaa1ff5ad47985d1b0a624ba4404b9',1,'eve::algo']]],
+  ['khinchin_1',['khinchin',['../group__math__constants_ga0741808f95c071aa804ddb0bd4488558.html#ga0741808f95c071aa804ddb0bd4488558',1,'eve']]],
+  ['kolmmean_2',['kolmmean',['../group__math__exp_gafa20e073c378a3eb096b3b3f3ee37741.html#gafa20e073c378a3eb096b3b3f3ee37741',1,'eve']]]
 ];
