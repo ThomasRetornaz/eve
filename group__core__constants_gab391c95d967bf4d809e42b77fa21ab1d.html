@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>E.V.E: eve::condition_key</title>
+<title>E.V.E: eve::max_safe_integer</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(function() { codefold.init(); });
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('group__extensions_ga9ce8a70ec561275ee6e45ec8e1b0fcf1.html','',''); });
+$(function(){initNavTree('group__core__constants_gab391c95d967bf4d809e42b77fa21ab1d.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -118,8 +118,8 @@ $(function(){initNavTree('group__extensions_ga9ce8a70ec561275ee6e45ec8e1b0fcf1.h
 </div>
 
 <div class="contents">
-<a id="ga9ce8a70ec561275ee6e45ec8e1b0fcf1" name="ga9ce8a70ec561275ee6e45ec8e1b0fcf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9ce8a70ec561275ee6e45ec8e1b0fcf1">&#9670;&#160;</a></span>condition_key</h2>
+<a id="gab391c95d967bf4d809e42b77fa21ab1d" name="gab391c95d967bf4d809e42b77fa21ab1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab391c95d967bf4d809e42b77fa21ab1d">&#9670;&#160;</a></span>max_safe_integer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,7 +128,7 @@ $(function(){initNavTree('group__extensions_ga9ce8a70ec561275ee6e45ec8e1b0fcf1.h
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">detail::condition_key_t eve::condition_key = {}</td>
+          <td class="memname">auto eve::max_safe_integer = <a class="el" href="group__extensions.html#ga406269d77123b31f9bc18b38b78c8e25">functor</a>&lt;max_safe_integer_t&gt;</td>
         </tr>
       </table>
   </td>
@@ -139,8 +139,55 @@ $(function(){initNavTree('group__extensions_ga9ce8a70ec561275ee6e45ec8e1b0fcf1.h
 </div><div class="memdoc">
 <p><b>Defined in Header</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;eve/module/core.hpp&gt;</span></div>
-</div><!-- fragment --><p>When a eve::decorated_callable is called with an option provided via eve::conditional, the value of the conditional can be retrieved using <a class="el" href="#ga9ce8a70ec561275ee6e45ec8e1b0fcf1" title="Keyword for retrieving conditionals decorator.">eve::condition_key</a> </p><dl class="section see"><dt>See also</dt><dd>eve::supports </dd></dl>
-
+</div><!-- fragment --><h2 class="groupheader">Callable Signatures </h2>
+<div class="fragment"><div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceeve.html">eve</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">template</span>&lt;eve::<span class="keywordtype">float</span>ing_value T&gt; <span class="keyword">constexpr</span> T <a class="code hl_variable" href="#gab391c95d967bf4d809e42b77fa21ab1d">max_safe_integer</a>(<a class="code hl_struct" href="structeve_1_1as.html">as&lt;T&gt;</a> x) <span class="keyword">noexcept</span>;</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__core__constants_gab391c95d967bf4d809e42b77fa21ab1d_html_gab391c95d967bf4d809e42b77fa21ab1d"><div class="ttname"><a href="#gab391c95d967bf4d809e42b77fa21ab1d">eve::max_safe_integer</a></div><div class="ttdeci">constexpr auto max_safe_integer</div><div class="ttdoc">Computes the greatest floating point representing an integer such that n != n+1.</div><div class="ttdef"><b>Definition</b> max_safe_integer.hpp:70</div></div>
+<div class="ttc" id="anamespaceeve_html"><div class="ttname"><a href="namespaceeve.html">eve</a></div><div class="ttdoc">EVE Main Namespace.</div><div class="ttdef"><b>Definition</b> abi.hpp:19</div></div>
+<div class="ttc" id="astructeve_1_1as_html"><div class="ttname"><a href="structeve_1_1as.html">eve::as</a></div><div class="ttdoc">Lightweight type-wrapper.</div><div class="ttdef"><b>Definition</b> as.hpp:29</div></div>
+</div><!-- fragment --><p><b>Parameters</b></p>
+<ul>
+<li><span class="tt">x</span> : <a class="el" href="structeve_1_1as.html" title="eve::as">Type wrapper</a> instance embedding the type of the constant.</li>
+</ul>
+<p><b>Return value</b></p>
+<p>The call <span class="tt"><a class="el" href="#gab391c95d967bf4d809e42b77fa21ab1d" title="Computes the greatest floating point representing an integer such that n != n+1.">eve::max_safe_integer</a>(<a class="el" href="structeve_1_1as.html" title="Lightweight type-wrapper.">as</a>&lt;T&gt;())</span> is semantically equivalent to:</p><ul>
+<li><span class="tt">T(2047.0f)</span> if <span class="tt">eve::element_type_t&lt;T&gt;</span> is float16.</li>
+<li><span class="tt">T(16777215.0f)</span> if <span class="tt">eve::element_type_t&lt;T&gt;</span> is float.</li>
+<li><span class="tt">T(9007199254740991.0)</span> if <span class="tt">eve::element_type_t&lt;T&gt;</span> is double.</li>
+</ul>
+<h2 class="groupheader">Example </h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;eve/module/core.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;eve/wide.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using </span>wide_ft = <a class="code hl_struct" href="structeve_1_1wide.html">eve::wide&lt;float&gt;</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">consteval</span> <span class="keyword">auto</span> constexpr_max_safe_integer() { <span class="keywordflow">return</span> <a class="code hl_variable" href="#gab391c95d967bf4d809e42b77fa21ab1d">eve::max_safe_integer</a>(<a class="code hl_struct" href="structeve_1_1as.html">eve::as&lt;T&gt;</a>{}); }</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">  wide_ft wxf;</div>
+<div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;---- simd&quot;</span>  &lt;&lt; std::endl</div>
+<div class="line">            &lt;&lt; <span class="stringliteral">&quot;-&gt; max_safe_integer(as&lt;wide_ft&gt;())       = &quot;</span> &lt;&lt; <a class="code hl_variable" href="#gab391c95d967bf4d809e42b77fa21ab1d">eve::max_safe_integer</a>(<a class="code hl_struct" href="structeve_1_1as.html">eve::as&lt;wide_ft&gt;</a>()) &lt;&lt; std::endl</div>
+<div class="line">            &lt;&lt; <span class="stringliteral">&quot;-&gt; max_safe_integer(as(wxf))             = &quot;</span> &lt;&lt; <a class="code hl_variable" href="#gab391c95d967bf4d809e42b77fa21ab1d">eve::max_safe_integer</a>(<a class="code hl_struct" href="structeve_1_1as.html">eve::as</a>(wxf))       &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">double</span>       xf;</div>
+<div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;---- scalar&quot;</span> &lt;&lt; std::endl</div>
+<div class="line">            &lt;&lt; <span class="stringliteral">&quot;-&gt; max_safe_integer(as&lt;float&gt;())         = &quot;</span> &lt;&lt; std::setprecision(17) &lt;&lt; <a class="code hl_variable" href="#gab391c95d967bf4d809e42b77fa21ab1d">eve::max_safe_integer</a>(<a class="code hl_struct" href="structeve_1_1as.html">eve::as</a>(<span class="keywordtype">float</span>())) &lt;&lt; std::endl</div>
+<div class="line">            &lt;&lt; <span class="stringliteral">&quot;-&gt; max_safe_integer(as&lt;xf))              = &quot;</span> &lt;&lt; std::setprecision(17) &lt;&lt; <a class="code hl_variable" href="#gab391c95d967bf4d809e42b77fa21ab1d">eve::max_safe_integer</a>(<a class="code hl_struct" href="structeve_1_1as.html">eve::as</a>(xf)) &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;-&gt; constexpr max_safe_integer            = &quot;</span> &lt;&lt; constexpr_max_safe_integer&lt;float&gt;() &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="astructeve_1_1wide_html"><div class="ttname"><a href="structeve_1_1wide.html">eve::wide</a></div><div class="ttdoc">Wrapper for SIMD registers.</div><div class="ttdef"><b>Definition</b> wide.hpp:94</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

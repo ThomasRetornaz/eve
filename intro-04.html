@@ -145,14 +145,9 @@ Adapting UDT to SIMD processing</h1>
 </div><!-- fragment --><p>The next thing we want is to be able to write <span class="tt"><a class="el" href="structeve_1_1wide.html" title="Wrapper for SIMD registers.">eve::wide</a>&lt;polar_coords&gt;</span> and have everything we already put in place for handling tuple just works with user-defined type. <b>EVE</b> provides an opt-in system to do just that.</p>
 <p>To register <span class="tt">polar_coords</span> to be usable as a type inside <a class="el" href="structeve_1_1wide.html" title="Wrapper for SIMD registers.">eve::wide</a>, two things are needed:</p><ul>
 <li>adapt the structure to be <a href="https://en.cppreference.com/w/cpp/language/structured_binding">compatible with C++ structured bindings</a>. This includes specializations for <span class="tt">std::tuple_size</span>, <span class="tt">std::tuple_element</span> and a <span class="tt">get</span> function.</li>
-<li>specialize eve::is_product_type to opt-in for product-type behavior</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">// Opt-in for eve::product_type</span></div>
 <div class="line"><span class="preprocessor">#include &lt;eve/traits/product_type.hpp&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><span class="keyword">struct </span>eve::is_product_type&lt;adapt::polar_coords&gt; : std::true_type</div>
-<div class="line">{};</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Standard Structured Bindings adaptation</span></div>
 <div class="line"><span class="keyword">namespace </span>adapt</div>
@@ -188,7 +183,7 @@ Adapting UDT to SIMD processing</h1>
 <div class="line">{</div>
 <div class="line">  <a class="code hl_function" href="namespaceeve.html#a69ab9db52c90128a055b0aaf62db8892">eve::wide&lt;polar_coords&gt;</a> to_polar(<a class="code hl_function" href="namespaceeve.html#a69ab9db52c90128a055b0aaf62db8892">eve::wide&lt;float&gt;</a> x, <a class="code hl_function" href="namespaceeve.html#a69ab9db52c90128a055b0aaf62db8892">eve::wide&lt;float&gt;</a> y)</div>
 <div class="line">  {</div>
-<div class="line">    <span class="keyword">auto</span> rho    = eve::hypot(x, y);</div>
+<div class="line">    <span class="keyword">auto</span> rho    = <a class="code hl_variable" href="group__math__exp_gaae6d8d8a0ad9d41260c0bbf8f642a370.html#gaae6d8d8a0ad9d41260c0bbf8f642a370">eve::hypot</a>(x, y);</div>
 <div class="line">    <span class="keyword">auto</span> theta  = <a class="code hl_variable" href="group__math__invtrig_ga4e3cc734432c96af2f4e1bfb576ea504.html#ga4e3cc734432c96af2f4e1bfb576ea504">eve::atan2</a>(y, x);</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceeve.html#a69ab9db52c90128a055b0aaf62db8892">eve::wide&lt;polar_coords&gt;</a>{ rho, theta };</div>
 <div class="line">  }</div>
@@ -237,7 +232,7 @@ Storage and Processing</h1>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">auto</span> to_polar(<a class="code hl_function" href="namespaceeve.html#a69ab9db52c90128a055b0aaf62db8892">eve::wide&lt;float&gt;</a> x, <a class="code hl_function" href="namespaceeve.html#a69ab9db52c90128a055b0aaf62db8892">eve::wide&lt;float&gt;</a> y)</div>
 <div class="line">  {</div>
-<div class="line">    <span class="keyword">auto</span> rho    = eve::hypot(x, y);</div>
+<div class="line">    <span class="keyword">auto</span> rho    = <a class="code hl_variable" href="group__math__exp_gaae6d8d8a0ad9d41260c0bbf8f642a370.html#gaae6d8d8a0ad9d41260c0bbf8f642a370">eve::hypot</a>(x, y);</div>
 <div class="line">    <span class="keyword">auto</span> theta  = <a class="code hl_variable" href="group__math__invtrig_ga4e3cc734432c96af2f4e1bfb576ea504.html#ga4e3cc734432c96af2f4e1bfb576ea504">eve::atan2</a>(y, x);</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceeve.html#a69ab9db52c90128a055b0aaf62db8892">eve::wide&lt;polar_coords&gt;</a>{rho, theta};</div>
 <div class="line">  }</div>

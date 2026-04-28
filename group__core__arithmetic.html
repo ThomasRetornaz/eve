@@ -156,6 +156,8 @@ Variables</h2></td></tr>
 <tr class="memdesc:gad85b8e8aca48a5e1db5ada47d8300950"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt"><a class="el" href="structeve_1_1elementwise__callable.html" title="CRTP base class giving an EVE&#39;s Callable Object the elementwise function semantic.">elementwise_callable</a></span> object computing the elementwise covariance product of the vector of the first half parameters by the vector of the last half.  <br /></td></tr>
 <tr class="memitem:ga44e2186aecde5f17445b39043094d85d" id="r_ga44e2186aecde5f17445b39043094d85d"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="group__core__arithmetic_ga44e2186aecde5f17445b39043094d85d.html#ga44e2186aecde5f17445b39043094d85d">eve::dec</a> = <a class="el" href="group__extensions.html#ga406269d77123b31f9bc18b38b78c8e25">functor</a>&lt;dec_t&gt;</td></tr>
 <tr class="memdesc:ga44e2186aecde5f17445b39043094d85d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt"><a class="el" href="structeve_1_1elementwise__callable.html" title="CRTP base class giving an EVE&#39;s Callable Object the elementwise function semantic.">elementwise_callable</a></span> object returning the input decremented by 1.  <br /></td></tr>
+<tr class="memitem:ga057eabc3676fe1e9370bd201a21e97d7" id="r_ga057eabc3676fe1e9370bd201a21e97d7"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="group__core__arithmetic_ga057eabc3676fe1e9370bd201a21e97d7.html#ga057eabc3676fe1e9370bd201a21e97d7">eve::diff</a> = <a class="el" href="group__extensions.html#ga406269d77123b31f9bc18b38b78c8e25">functor</a>&lt;diff_t&gt;</td></tr>
+<tr class="memdesc:ga057eabc3676fe1e9370bd201a21e97d7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">tuple_callable</span> computing the nth adjacent differences of its arguments.  <br /></td></tr>
 <tr class="memitem:ga0278a079dfdeb50fcb31e27b3ac191f9" id="r_ga0278a079dfdeb50fcb31e27b3ac191f9"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="group__core__arithmetic_ga0278a079dfdeb50fcb31e27b3ac191f9.html#ga0278a079dfdeb50fcb31e27b3ac191f9">eve::dist</a> = <a class="el" href="group__extensions.html#ga406269d77123b31f9bc18b38b78c8e25">functor</a>&lt;dist_t&gt;</td></tr>
 <tr class="memdesc:ga0278a079dfdeb50fcb31e27b3ac191f9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt"><a class="el" href="structeve_1_1elementwise__callable.html" title="CRTP base class giving an EVE&#39;s Callable Object the elementwise function semantic.">elementwise_callable</a></span> object computing the distance of its arguments.  <br /></td></tr>
 <tr class="memitem:gaf14eacd69db8a64fecf63346475c37fb" id="r_gaf14eacd69db8a64fecf63346475c37fb"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="group__core__arithmetic_gaf14eacd69db8a64fecf63346475c37fb.html#gaf14eacd69db8a64fecf63346475c37fb">eve::div</a> = <a class="el" href="group__extensions.html#ga406269d77123b31f9bc18b38b78c8e25">functor</a>&lt;div_t&gt;</td></tr>
@@ -244,12 +246,40 @@ Variables</h2></td></tr>
 <tr class="memdesc:ga69b984ff64182f743ac046245f284168"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">tuple_callable</span> object computing the sum_of_squares norm ( \(l_1\)) of its arguments.  <br /></td></tr>
 <tr class="memitem:ga5ebab1e2407219111f8d3916ad4e6819" id="r_ga5ebab1e2407219111f8d3916ad4e6819"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="group__core__arithmetic_ga5ebab1e2407219111f8d3916ad4e6819.html#ga5ebab1e2407219111f8d3916ad4e6819">eve::trunc</a> = <a class="el" href="group__extensions.html#ga406269d77123b31f9bc18b38b78c8e25">functor</a>&lt;trunc_t&gt;</td></tr>
 <tr class="memdesc:ga5ebab1e2407219111f8d3916ad4e6819"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt"><a class="el" href="structeve_1_1elementwise__callable.html" title="CRTP base class giving an EVE&#39;s Callable Object the elementwise function semantic.">elementwise_callable</a></span> object computing the integral part of <span class="tt">x</span> with the same sign as <span class="tt">x</span>.  <br /></td></tr>
+<tr class="memitem:gab00b0403241b47b4e0a7f3e2d8be4cfd" id="r_gab00b0403241b47b4e0a7f3e2d8be4cfd"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="group__core__arithmetic_gab00b0403241b47b4e0a7f3e2d8be4cfd.html#gab00b0403241b47b4e0a7f3e2d8be4cfd">eve::unfold</a> = <a class="el" href="group__extensions.html#ga406269d77123b31f9bc18b38b78c8e25">functor</a>&lt;unfold_t&gt;</td></tr>
+<tr class="memdesc:gab00b0403241b47b4e0a7f3e2d8be4cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">tuple_callable</span> utility to convert a pack of values into a tuple of scalar values.  <br /></td></tr>
 <tr class="memitem:ga28cc50956bdc395bb00ecef16bebb59d" id="r_ga28cc50956bdc395bb00ecef16bebb59d"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="group__core__arithmetic_ga28cc50956bdc395bb00ecef16bebb59d.html#ga28cc50956bdc395bb00ecef16bebb59d">eve::variance</a> = <a class="el" href="group__extensions.html#ga406269d77123b31f9bc18b38b78c8e25">functor</a>&lt;variance_t&gt;</td></tr>
 <tr class="memdesc:ga28cc50956bdc395bb00ecef16bebb59d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">tuple_callable</span> computing the variance of its arguments.  <br /></td></tr>
 <tr class="memitem:ga3fee14a8a396f4ac89e650e0fb0768f7" id="r_ga3fee14a8a396f4ac89e650e0fb0768f7"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="group__core__arithmetic_ga3fee14a8a396f4ac89e650e0fb0768f7.html#ga3fee14a8a396f4ac89e650e0fb0768f7">eve::welford_covariance</a> = <a class="el" href="group__extensions.html#ga406269d77123b31f9bc18b38b78c8e25">functor</a>&lt;welford_covariance_t&gt;</td></tr>
 <tr class="memdesc:ga3fee14a8a396f4ac89e650e0fb0768f7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt"><a class="el" href="structeve_1_1elementwise__callable.html" title="CRTP base class giving an EVE&#39;s Callable Object the elementwise function semantic.">elementwise_callable</a></span> object computing the elementwise welford_covariance product of the vector of the first half parameter by thevector of the last half.  <br /></td></tr>
 <tr class="memitem:ga6cfd55c36f3ce4f4137aa7b14f74f5ce" id="r_ga6cfd55c36f3ce4f4137aa7b14f74f5ce"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="group__core__arithmetic_ga6cfd55c36f3ce4f4137aa7b14f74f5ce.html#ga6cfd55c36f3ce4f4137aa7b14f74f5ce">eve::welford_variance</a> = <a class="el" href="group__extensions.html#ga406269d77123b31f9bc18b38b78c8e25">functor</a>&lt;welford_variance_t&gt;</td></tr>
 <tr class="memdesc:ga6cfd55c36f3ce4f4137aa7b14f74f5ce"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">tuple_callable</span> computing the arithmetic mean of its arguments.  <br /></td></tr>
+<tr class="memitem:ga9410b950085a4299478368cdc4864e58" id="r_ga9410b950085a4299478368cdc4864e58"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="group__core__arithmetic_ga9410b950085a4299478368cdc4864e58.html#ga9410b950085a4299478368cdc4864e58">eve::neville</a> = <a class="el" href="group__extensions.html#ga406269d77123b31f9bc18b38b78c8e25">functor</a>&lt;neville_t&gt;</td></tr>
+<tr class="memdesc:ga9410b950085a4299478368cdc4864e58"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt"><a class="el" href="structeve_1_1callable.html" title="CRTP base class defining an EVE&#39;s Callable Object.">callable</a></span> computing the value of the interpolation polynomial \(p\) of degree n, satisfying: /f$ p(x_i) = y_i for i = 0..n                           \(  @groupheader{Header file}
+
+  @code
+  #include &lt;eve/module/core.hpp&gt;
+  @endcode
+
+  @groupheader{Callable Signatures}
+
+  @code
+  namespace eve
+  {
+     // Regular overloads
+     constexpr auto neville(auto x, auto const&amp; xs..., auto const&amp; ys...)                                                    noexcept; // 1
+     constexpr auto neville(auto x, eve::non_empty_product_type auto const&amp; xx,  eve::non_empty_product_type auto const&amp; yy) noexcept; // 2
+  }
+  @endcode
+
+  **Parameters**
+
+      `xs ...`, `ys ...: [real](@ref eve::floating values) arguments
+      `xx`, `yy`       : kumi::tuple of arguments
+
+   **Return value**
+
+       1. Return the value at x of the polynomial \)@_fakenlp \( of degree n, atisfying: /f$ p(x_i) = y_i for i = 0..n\) where n+1 is the common number of <span class="tt">xs</span>, <span class="tt">ys</span>.  <br /></td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
